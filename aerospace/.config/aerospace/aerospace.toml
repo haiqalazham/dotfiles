@@ -10,7 +10,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget /usr/local/bin/borders active_color=0xffef9f76 inactive_color=0xff494d64 width=5.0'
+  'exec-and-forget /usr/local/bin/borders active_color=0xffA550A7 inactive_color=0xff494d64 width=5.0'
 ]
 # after-startup-command = [
 #  'exec-and-forget /usr/local/bin/borders active_color=0xffef9f76 inactive_color=0xff494d64 width=5.0', 'exec-and-forget /usr/local/bin/aeroIndicator --restart-service'
@@ -127,8 +127,8 @@ automatically-unhide-macos-hidden-apps = true
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     ctrl-alt-shift-1 = 'workspace --auto-back-and-forth 1:com'
     ctrl-alt-shift-2 = 'workspace --auto-back-and-forth 2:gtd'
-    ctrl-alt-shift-3 = 'workspace --auto-back-and-forth 3'
-    ctrl-alt-shift-4 = 'workspace --auto-back-and-forth 4'
+    ctrl-alt-shift-3 = 'workspace --auto-back-and-forth 3:www'
+    ctrl-alt-shift-4 = 'workspace --auto-back-and-forth 4:dev'
     ctrl-alt-shift-5 = 'workspace --auto-back-and-forth 5'
     ctrl-alt-shift-6 = 'workspace --auto-back-and-forth 6'
     ctrl-alt-shift-7 = 'workspace --auto-back-and-forth 7'
@@ -138,8 +138,8 @@ automatically-unhide-macos-hidden-apps = true
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     ctrl-alt-cmd-shift-1 = ['move-node-to-workspace 1:com', 'workspace --auto-back-and-forth 1:com']
     ctrl-alt-cmd-shift-2 = ['move-node-to-workspace 2:gtd', 'workspace --auto-back-and-forth 2:gtd']
-    ctrl-alt-cmd-shift-3 = ['move-node-to-workspace 3', 'workspace --auto-back-and-forth 3']
-    ctrl-alt-cmd-shift-4 = ['move-node-to-workspace 4', 'workspace --auto-back-and-forth 4']
+    ctrl-alt-cmd-shift-3 = ['move-node-to-workspace 3:www', 'workspace --auto-back-and-forth 3:www']
+    ctrl-alt-cmd-shift-4 = ['move-node-to-workspace 4:dev', 'workspace --auto-back-and-forth 4:dev']
     ctrl-alt-cmd-shift-5 = ['move-node-to-workspace 5', 'workspace --auto-back-and-forth 5']
     ctrl-alt-cmd-shift-6 = ['move-node-to-workspace 6', 'workspace --auto-back-and-forth 6']
     ctrl-alt-cmd-shift-7 = ['move-node-to-workspace 7', 'workspace --auto-back-and-forth 7']
@@ -154,8 +154,8 @@ automatically-unhide-macos-hidden-apps = true
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    t = 'layout tiles horizontal vertical'
-    s = 'layout accordion horizontal vertical'
+    t = ['layout tiles horizontal vertical', 'mode main']
+    s = ['layout accordion horizontal vertical', 'mode main']
 
     h = ['join-with left', 'mode main']
     j = ['join-with down', 'mode main']
