@@ -1,0 +1,17 @@
+{
+    "manipulators": [
+        {
+            "description": "Change caps_lock to meh (control+option+shift).",
+            "from": {
+                "key_code": "caps_lock",
+            },
+            "to": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_control", "left_option"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
