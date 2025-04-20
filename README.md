@@ -24,6 +24,12 @@ The install script will:
 
 Use 1Password SSH feature. Follow instructions in 1Password. Don't forget to setup `.gitconfig` and add commit author.
 
+## Todo
+
+- [ ] Git config setup
+- [ ] VSCode setup
+- [ ] Alfred setup
+
 ## Inspired by
 
 - [Jason Morris' dotfiles repo](https://github.com/jsnmrs/dotfiles/)
