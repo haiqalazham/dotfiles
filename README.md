@@ -28,3 +28,4 @@ Use 1Password SSH feature. Follow instructions in 1Password. Don't forget to set
 
 - [Jason Morris' dotfiles repo](https://github.com/jsnmrs/dotfiles/)
 - [Pablo Ordorica Wiener's dotfiles repo](https://github.com/pablordoricaw/my-mac-setup/)
+- [Paul Miller's dotfiles repo](https://github.com/paulmillr/dotfiles)
