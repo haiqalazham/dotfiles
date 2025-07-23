@@ -125,10 +125,10 @@ automatically-unhide-macos-hidden-apps = true
     ctrl-alt-shift-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    ctrl-alt-shift-1 = 'workspace --auto-back-and-forth 1:com'
-    ctrl-alt-shift-2 = 'workspace --auto-back-and-forth 2:gtd'
-    ctrl-alt-shift-3 = 'workspace --auto-back-and-forth 3:www'
-    ctrl-alt-shift-4 = 'workspace --auto-back-and-forth 4:dev'
+    ctrl-alt-shift-1 = 'workspace --auto-back-and-forth 1'
+    ctrl-alt-shift-2 = 'workspace --auto-back-and-forth 2'
+    ctrl-alt-shift-3 = 'workspace --auto-back-and-forth 3'
+    ctrl-alt-shift-4 = 'workspace --auto-back-and-forth 4'
     ctrl-alt-shift-5 = 'workspace --auto-back-and-forth 5'
     ctrl-alt-shift-6 = 'workspace --auto-back-and-forth 6'
     ctrl-alt-shift-7 = 'workspace --auto-back-and-forth 7'
@@ -136,10 +136,10 @@ automatically-unhide-macos-hidden-apps = true
     ctrl-alt-shift-9 = 'workspace --auto-back-and-forth 9'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    ctrl-alt-cmd-shift-1 = ['move-node-to-workspace 1:com', 'workspace --auto-back-and-forth 1:com']
-    ctrl-alt-cmd-shift-2 = ['move-node-to-workspace 2:gtd', 'workspace --auto-back-and-forth 2:gtd']
-    ctrl-alt-cmd-shift-3 = ['move-node-to-workspace 3:www', 'workspace --auto-back-and-forth 3:www']
-    ctrl-alt-cmd-shift-4 = ['move-node-to-workspace 4:dev', 'workspace --auto-back-and-forth 4:dev']
+    ctrl-alt-cmd-shift-1 = ['move-node-to-workspace 1', 'workspace --auto-back-and-forth 1']
+    ctrl-alt-cmd-shift-2 = ['move-node-to-workspace 2', 'workspace --auto-back-and-forth 2']
+    ctrl-alt-cmd-shift-3 = ['move-node-to-workspace 3', 'workspace --auto-back-and-forth 3']
+    ctrl-alt-cmd-shift-4 = ['move-node-to-workspace 4', 'workspace --auto-back-and-forth 4']
     ctrl-alt-cmd-shift-5 = ['move-node-to-workspace 5', 'workspace --auto-back-and-forth 5']
     ctrl-alt-cmd-shift-6 = ['move-node-to-workspace 6', 'workspace --auto-back-and-forth 6']
     ctrl-alt-cmd-shift-7 = ['move-node-to-workspace 7', 'workspace --auto-back-and-forth 7']
@@ -165,15 +165,15 @@ automatically-unhide-macos-hidden-apps = true
 # comm apps
 [[on-window-detected]]
     if.app-id = 'com.apple.MobileSMS'
-    run = 'move-node-to-workspace 1:com'
+    run = 'move-node-to-workspace 1'
 [[on-window-detected]]
     if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 1:com'
+    run = 'move-node-to-workspace 1'
     
 # gtd apps
 [[on-window-detected]]
     if.app-id = 'com.culturedcode.ThingsMac'
-    run = 'move-node-to-workspace 2:gtd'
+    run = 'move-node-to-workspace 2'
 [[on-window-detected]]
     if.app-id = 'com.apple.iCal'
-    run = 'move-node-to-workspace 2:gtd'
+    run = 'move-node-to-workspace 2'
