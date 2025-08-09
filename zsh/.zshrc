@@ -34,3 +34,5 @@ alias ls='ls --color'
 
 # shell integrations
 source <(fzf --zsh)
+
+eval "$(fnm env --use-on-cd --shell zsh)"
