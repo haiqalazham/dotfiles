@@ -165,15 +165,31 @@ automatically-unhide-macos-hidden-apps = true
 # comm apps
 [[on-window-detected]]
     if.app-id = 'com.apple.MobileSMS'
-    run = 'move-node-to-workspace 1'
+    run = 'move-node-to-workspace 8'
 [[on-window-detected]]
     if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 1'
+    run = 'move-node-to-workspace 8'
+[[on-window-detected]]
+    if.app-id = 'net.whatsapp.WhatsApp'
+    run = 'move-node-to-workspace 8'
+
     
 # gtd apps
 [[on-window-detected]]
     if.app-id = 'com.culturedcode.ThingsMac'
-    run = 'move-node-to-workspace 2'
+    run = 'move-node-to-workspace 1'
 [[on-window-detected]]
     if.app-id = 'com.apple.iCal'
+    run = 'move-node-to-workspace 1'
+
+# reference apps
+[[on-window-detected]]
+    if.app-id = 'net.shinyfrog.bear'
+    if.window-title-regex-substring = 'Bear'
+    run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+    if.app-id = 'io.raindrop.macapp'
+    run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+    if.app-id = 'com.mymind.mymind-mac'
     run = 'move-node-to-workspace 2'
