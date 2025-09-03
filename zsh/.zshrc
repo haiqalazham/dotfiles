@@ -36,3 +36,4 @@ alias ls='ls --color'
 source <(fzf --zsh)
 
 eval "$(fnm env --use-on-cd --shell zsh)"
+eval "$(zoxide init zsh)"
