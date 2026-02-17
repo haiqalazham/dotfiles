@@ -1,5 +1,5 @@
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = false
 
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
@@ -67,7 +67,7 @@ automatically-unhide-macos-hidden-apps = true
     inner.horizontal = 10
     inner.vertical =   10
     outer.left =       10
-    outer.bottom =     50
+    outer.bottom =     40
     outer.top =        10
     outer.right =      10
 
@@ -118,7 +118,7 @@ automatically-unhide-macos-hidden-apps = true
     ctrl-alt-cmd-shift-j = 'move down'
     ctrl-alt-cmd-shift-k = 'move up'
     ctrl-alt-cmd-shift-l = 'move right'
-    
+
     ctrl-alt-shift-left = 'move-node-to-monitor --focus-follows-window --wrap-around prev'
     ctrl-alt-shift-right = 'move-node-to-monitor --focus-follows-window --wrap-around next'
 
@@ -167,15 +167,15 @@ automatically-unhide-macos-hidden-apps = true
 # comm apps
 [[on-window-detected]]
     if.app-id = 'com.apple.MobileSMS'
-    run = 'move-node-to-workspace 8'
+    run = 'move-node-to-workspace 9'
 [[on-window-detected]]
     if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 8'
+    run = 'move-node-to-workspace 9'
 [[on-window-detected]]
     if.app-id = 'net.whatsapp.WhatsApp'
-    run = 'move-node-to-workspace 8'
+    run = 'move-node-to-workspace 9'
 
-    
+
 # gtd apps
 [[on-window-detected]]
     if.app-id = 'com.culturedcode.ThingsMac'
