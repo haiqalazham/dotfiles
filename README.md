@@ -6,13 +6,17 @@
 
 Clone the repo at $HOME directory.
 
-`git clone git@github.com:haiqalazham/dotfiles.git && cd dotfiles`
+```
+git clone git@github.com:haiqalazham/dotfiles.git && cd dotfiles
+```
 
 ## Installation
 
 Run the following command
 
-`source install.sh`
+```
+source install.sh
+```
 
 The install script will:
 
