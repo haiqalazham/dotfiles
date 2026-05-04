@@ -1,24 +1,23 @@
-# Start AeroSpace at login
-start-at-login = false
+# Config version for compatibility and deprecations
+# Fallback value (if you omit the key): config-version = 1
+config-version = 2
 
-# You can use it to add commands that run after login to macOS user session.
-# 'start-at-login' needs to be 'true' for 'after-login-command' to work
-# Available commands: https://nikitabobko.github.io/AeroSpace/commands
-after-login-command = []
+# Start AeroSpace at login
+start-at-login = true
 
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
   'exec-and-forget borders active_color=0xffA550A7 inactive_color=0xff494d64 width=5.0',
-  'exec-and-forget sketchybar'
+#  'exec-and-forget sketchybar'
 ]
 
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-]
-
-on-focus-changed = ['exec-and-forget sketchybar --trigger aerospace_focus_change']
+# Sketchybar config. Uncomment to enable sketchybar as part of AeroSpace.
+# exec-on-workspace-change = ['/bin/bash', '-c',
+#     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+# ]
+# on-focus-changed = ['exec-and-forget sketchybar --trigger aerospace_focus_change']
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -50,6 +49,8 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -67,7 +68,8 @@ automatically-unhide-macos-hidden-apps = true
     inner.horizontal = 10
     inner.vertical =   10
     outer.left =       10
-    outer.bottom =     40
+    outer.bottom =     10
+    # outer.bottom =     40 # uncomment for Sketchybar support
     outer.top =        10
     outer.right =      10
 
@@ -163,35 +165,3 @@ automatically-unhide-macos-hidden-apps = true
     j = ['join-with down', 'mode main']
     k = ['join-with up', 'mode main']
     l = ['join-with right', 'mode main']
-
-# comm apps
-[[on-window-detected]]
-    if.app-id = 'com.apple.MobileSMS'
-    run = 'move-node-to-workspace 9'
-[[on-window-detected]]
-    if.app-id = 'com.apple.mail'
-    run = 'move-node-to-workspace 9'
-[[on-window-detected]]
-    if.app-id = 'net.whatsapp.WhatsApp'
-    run = 'move-node-to-workspace 9'
-
-
-# gtd apps
-[[on-window-detected]]
-    if.app-id = 'com.culturedcode.ThingsMac'
-    run = 'move-node-to-workspace 1'
-[[on-window-detected]]
-    if.app-id = 'com.apple.iCal'
-    run = 'move-node-to-workspace 1'
-
-# reference apps
-[[on-window-detected]]
-    if.app-id = 'net.shinyfrog.bear'
-    if.window-title-regex-substring = 'Bear'
-    run = 'move-node-to-workspace 2'
-[[on-window-detected]]
-    if.app-id = 'io.raindrop.macapp'
-    run = 'move-node-to-workspace 2'
-[[on-window-detected]]
-    if.app-id = 'com.mymind.mymind-mac'
-    run = 'move-node-to-workspace 2'
