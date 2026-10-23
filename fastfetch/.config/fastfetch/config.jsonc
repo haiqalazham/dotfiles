@@ -1,0 +1,270 @@
+// Inspired by https://github.com/usgraphics/TR-100
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": null,
+    "display": {
+        "pipe": true,
+        "key": {
+            "width": 16
+        },
+        "separator": "│ ",
+        "percent": {
+            "type": ["bar", "hide-others"]
+        },
+        "bar": {
+            "border": null,
+            "char": {
+                "elapsed": "█",
+                "total": "░"
+            },
+            "width": 40
+        },
+        "constants": [
+            "\u001b[42C"
+        ]
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┐"
+        },
+        {
+            "type": "custom",
+            "format": "├┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┤"
+        },
+        {
+            "type": "version",
+            "key": " ",
+            "format": "│                   FASTFETCH v{version}                   │"
+        },
+        {
+            "type": "custom",
+            "format": "│                 TR-100 MACHINE REPORT                 │"
+        },
+
+        // ── System ─────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┬──────────────────────────────────────────┤"
+        },
+        {
+            "type": "host",
+            "key": "│ MACHINE    │{$1}",
+            "format": "{name}"
+        },
+        {
+            "type": "os",
+            "key": "│ OS         │{$1}",
+            "format": "{pretty-name}"
+        },
+        {
+            "type": "kernel",
+            "key": "│ KERNEL     │{$1}"
+        },
+        {
+            "type": "title",
+            "key": "│ HOSTNAME   │{$1}",
+            "format": "{host-name}"
+        },
+        {
+            "type": "title",
+            "key": "│ USER       │{$1}",
+            "format": "{user-name}"
+        },
+
+        // ── Network ────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "localip",
+            "key": "│ CLIENT IP  │{$1}",
+            "format": "{ipv4}"
+        },
+        {
+            "type": "localip",
+            "key": "│ MAC ADDR   │{$1}",
+            "format": "{mac} ({ifname})",
+            "showIpv4": false,
+            "showMac": true
+        },
+        {
+            "type": "dns",
+            "key": "│ DNS        │{$1}",
+            "showType": "ipv4"
+        },
+
+        // ── Processor ──────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "cpu",
+            "key": "│ CPU        │{$1}",
+            "showPeCoreCount": true
+        },
+        {
+            "type": "gpu",
+            "key": "│ GPU        │{$1}"
+        },
+        {
+            "type": "loadavg",
+            "compact": false,
+            "key": "│ LOAD  {duration>2}m  │{$1}" // pad duration to 2 chars
+        },
+
+        // ── Memory ─────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "memory",
+            "key": "│ MEMORY     │{$1}",
+            "format": "{used} / {total} [{percentage}]",
+            "percent": {
+                "type": ["num"]
+            }
+        },
+        {
+            "type": "memory",
+            "key": "│ USAGE      │{$1}",
+            "format": "",
+            "percent": {
+                "type": ["bar", "hide-others"]
+            }
+        },
+
+        // ── Storage ────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "disk",
+            "key": "│ VOLUME     │{$1}",
+            "format": "{size-used} / {size-total} [{size-percentage}]",
+            "folders": "/",
+            "percent": {
+                "type": ["num"]
+            }
+        },
+        {
+            "type": "disk",
+            "key": "│ DISK USAGE │{$1}",
+            "format": "",
+            "percent": {
+                "type": ["bar", "hide-others"]
+            }
+        },
+
+        // ── Battery ────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "battery",
+            "key": "│ BATTERY    │{$1}",
+            "percent": {
+                "type": ["num"]
+            }
+        },
+        {
+            "type": "battery",
+            "key": "│ CHARGE     │{$1}",
+            "format": "{capacity-bar}"
+        },
+
+        // ── Desktop ────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "de",
+            "key": "│ DE         │{$1}"
+        },
+        {
+            "type": "wm",
+            "key": "│ WM         │{$1}",
+            "format": "{pretty-name}"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ WM THEME   │{$1}"
+        },
+        {
+            "type": "font",
+            "key": "│ FONT       │{$1}"
+        },
+        {
+            "type": "display",
+            "key": "│ DISPLAY    │{$1}",
+            "format": "{width}x{height} @ {refresh-rate}Hz"
+        },
+
+        // ── Terminal ───────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "terminal",
+            "key": "│ TERMINAL   │{$1}",
+            "format": "{pretty-name}"
+        },
+        {
+            "type": "terminalfont",
+            "key": "│ TERM FONT  │{$1}"
+        },
+        {
+            "type": "shell",
+            "key": "│ SHELL      │{$1}"
+        },
+        {
+            "type": "packages",
+            "key": "│ PACKAGES   │{$1}"
+        },
+
+        // ── Session ────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "users",
+            "key": "│ LAST LOGIN │{$1}",
+            "format": "{login-time}{?client-ip} ({client-ip})",
+            "myselfOnly": true
+        },
+        {
+            "type": "uptime",
+            "key": "│ UPTIME     │{$1}"
+        },
+
+        // ── Colors ────────────────────────────────────────────
+        {
+            "type": "custom",
+            "format": "├────────────┼──────────────────────────────────────────┤"
+        },
+        {
+            "type": "colors",
+            "key": "│ COLORS     │{$1}",
+            "symbol": "background",
+            "block": { "range": [0, 7], "width": 5}
+        },
+        {
+            "type": "colors",
+            "key": "│            │{$1}",
+            "symbol": "background",
+            "block": { "range": [8, 15], "width": 5}
+        },
+        {
+            "type": "custom",
+            "format": "└────────────┴──────────────────────────────────────────┘"
+        }
+    ]
+}

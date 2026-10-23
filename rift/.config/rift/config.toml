@@ -1,0 +1,81 @@
+[settings]
+animate = true
+default_disable = false
+mouse_hides_on_focus = true
+mouse_follows_focus = true
+focus_follows_mouse = true
+run_on_start = ["borders"]
+
+[settings.layout]
+mode = "bsp"
+
+[settings.layout.stack]
+default_orientation = "horizontal"
+
+[settings.layout.scrolling]
+
+[settings.layout.scrolling.gestures]
+enabled = false
+invert_horizontal = true
+
+[settings.layout.gaps.outer]
+top = 10
+left = 10
+bottom = 10
+right = 10
+
+[settings.layout.gaps.inner]
+horizontal = 10
+vertical = 10
+
+[settings.ui.menu_bar]
+enabled = true
+display_style = "label"
+
+[settings.ui.mission_control]
+enabled = true
+window_previews = true
+
+[virtual_workspaces]
+default_workspace_count = 9
+workspace_names = ["Main", "Dev", "Comm", "", "", "", "", "", ""]
+
+[modifier_combinations]
+meh = "Ctrl + Alt + Shift"
+
+[keys]
+"meh + Z" = "toggle_space_activated"
+"meh + H" = { move_focus = "left" }
+"meh + J" = { move_focus = "down" }
+"meh + K" = { move_focus = "up" }
+"meh + L" = { move_focus = "right" }
+"meh + Meta + H" = { move_node = "left" }
+"meh + Meta + J" = { move_node = "down" }
+"meh + Meta + K" = { move_node = "up" }
+"meh + Meta + L" = { move_node = "right" }
+"meh + F" = "toggle_fullscreen_within_gaps"
+"meh + Meta + F" = "toggle_window_floating"
+
+"meh + Equal" = "resize_window_grow"
+"meh + Minus" = "resize_window_shrink"
+
+"meh + 1" = { switch_to_workspace = 0 }
+"meh + 2" = { switch_to_workspace = 1 }
+"meh + 3" = { switch_to_workspace = 2 }
+"meh + 4" = { switch_to_workspace = 3 }
+"meh + 5" = { switch_to_workspace = 4 }
+"meh + 6" = { switch_to_workspace = 5 }
+"meh + 7" = { switch_to_workspace = 6 }
+"meh + 8" = { switch_to_workspace = 7 }
+"meh + 9" = { switch_to_workspace = 8 }
+"meh + Meta + 1" = { move_window_to_workspace = 0 }
+"meh + Meta + 2" = { move_window_to_workspace = 1 }
+"meh + Meta + 3" = { move_window_to_workspace = 2 }
+"meh + Meta + 4" = { move_window_to_workspace = 3 }
+"meh + Meta + 5" = { move_window_to_workspace = 4 }
+"meh + Meta + 6" = { move_window_to_workspace = 5 }
+"meh + Meta + 7" = { move_window_to_workspace = 6 }
+"meh + Meta + 8" = { move_window_to_workspace = 7 }
+"meh + Meta + 9" = { move_window_to_workspace = 8 }
+
+"meh + Tab" = "show_mission_control_all"
