@@ -1,9 +1,6 @@
 [settings]
 animate = true
 default_disable = false
-mouse_hides_on_focus = true
-mouse_follows_focus = true
-focus_follows_mouse = true
 run_on_start = ["borders"]
 
 [settings.layout]
@@ -13,6 +10,9 @@ mode = "bsp"
 default_orientation = "horizontal"
 
 [settings.layout.scrolling]
+
+[settings.layout.master_stack]
+new_window_placement = "stack"
 
 [settings.layout.scrolling.gestures]
 enabled = false
@@ -31,6 +31,7 @@ vertical = 10
 [settings.ui.menu_bar]
 enabled = true
 display_style = "label"
+show_fullscreen_indicator = true
 
 [settings.ui.mission_control]
 enabled = true
@@ -38,7 +39,7 @@ window_previews = true
 
 [virtual_workspaces]
 default_workspace_count = 9
-workspace_names = ["Main", "Dev", "Comm", "", "", "", "", "", ""]
+workspace_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 [modifier_combinations]
 meh = "Ctrl + Alt + Shift"
@@ -54,7 +55,7 @@ meh = "Ctrl + Alt + Shift"
 "meh + Meta + K" = { move_node = "up" }
 "meh + Meta + L" = { move_node = "right" }
 "meh + F" = "toggle_fullscreen_within_gaps"
-"meh + Meta + F" = "toggle_window_floating"
+"meh + Meta + F" = { toggle_window_floating = { center = true, size = "smart"} }
 
 "meh + Equal" = "resize_window_grow"
 "meh + Minus" = "resize_window_shrink"
