@@ -5,6 +5,25 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Change right_command to meh (control+option+shift)",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_control", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change caps_lock to meh (control+option+shift)",
                         "manipulators": [
                             {

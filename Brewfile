@@ -1,7 +1,9 @@
 # CLI tools
 
 brew "antidote"
+brew "bat"
 brew "btop"
+brew "eza"
 brew "fastfetch"
 brew "fnm"
 brew "fzf"
@@ -9,15 +11,14 @@ brew "mas"
 brew "stow"
 brew "tree"
 brew "uv"
+brew "zoxide"
 
 # Apps
 
-cask "1password"
 cask "alfred"
 cask "anki"
 cask "cleanshot"
 cask "tailscale"
-cask "visual-studio-code"
 cask "zotero"
 
 # Safari Extensions
@@ -38,11 +39,3 @@ mas "Pages", id: 409201541
 mas "Soulver 3", id: 1508732804
 mas "Things", id: 904280696
 mas "Xcode", id: 497799835
-
-# VSCode setup
-
-vscode "bradlc.vscode-tailwindcss"
-vscode "dbaeumer.vscode-eslint"
-vscode "esbenp.prettier-vscode"
-vscode "unifiedjs.vscode-mdx"
-vscode "vscodevim.vim"
